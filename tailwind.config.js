@@ -70,6 +70,8 @@ module.exports = {
 			ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
 			pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
 			bounce: "bounce 1s infinite",
+			float: "float 3s infinite",
+			refloat: "refloat 3s infinite",
 		},
 		backdropBlur: (theme) => theme("blur"),
 		backdropBrightness: (theme) => theme("brightness"),
@@ -466,6 +468,34 @@ module.exports = {
 				"50%": {
 					transform: "none",
 					animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+				},
+			},
+			float: {
+				"0%": {
+					transform: "translateY(0px)",
+					animationTimingFunction: "ease-in-out",
+				},
+				"50%": {
+					transform: "translateY(-20px)",
+					animationTimingFunction: "ease-in-out",
+				},
+				"100%": {
+					transform: "translateY(0px)",
+					animationTimingFunction: "ease-in-out",
+				},
+			},
+			refloat: {
+				"0%": {
+					transform: "translateY(-20px)",
+					animationTimingFunction: "ease-in-out",
+				},
+				"50%": {
+					transform: "translateY(0px)",
+					animationTimingFunction: "ease-in-out",
+				},
+				"100%": {
+					transform: "translateY(-20px)",
+					animationTimingFunction: "ease-in-out",
 				},
 			},
 		},

@@ -1,7 +1,7 @@
 import React from "react";
 import content from "../content";
 
-function Navigations(props) {
+function Navigation(props) {
 	return (
 		<div style={{ background: "#091c29" }}>
 			<div className="flex items-center justify-between w-10/12 mx-auto py-3 text-white font-dosis">
@@ -23,4 +23,4 @@ function Navigations(props) {
 	);
 }
 
-export default Navigations;
+export default Navigation;
