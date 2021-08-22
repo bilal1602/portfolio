@@ -1,8 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 import content from "../content";
 import Typical from "react-typical";
 import { Link as ScrollLink } from "react-scroll";
+
+function BgImage(props) {
+	return (
+		<div
+			style={{
+				background: "url(" + props.bg + ")",
+				backgroundSize: "cover",
+				height: "60vh",
+				width: "60vh",
+				borderRadius: 5,
+			}}
+		>
+			{/* <div
+				style={{
+					position: "absolute",
+					height: "60vh",
+					width: "60vh",
+					backgroundColor: props.tint,
+					zIndex: "1000",
+				}}
+			/> */}
+		</div>
+	);
+}
+
 const Header = () => {
 	const [animated, setAnimated] = useState(false);
 	useEffect(() => setAnimated(true), []);
@@ -10,7 +35,8 @@ const Header = () => {
 		<div className="min-h-screen flex items-center justify-center" style={{ background: "#091c29" }}>
 			<div className={"w-10/12 mx-auto flex flex-col md:flex-row-reverse items-center justify-between"}>
 				<div className={"w-full md:w-2/5"}>
-					<LazyLoadImage src={content.header.img} effect="blur" />
+					<BgImage bg={content.header.img} tint="rgba(9, 28, 41,0.7)" />
+					{/* <LazyLoadImage src={content.header.img} effect="blur"></LazyLoadImage> */}
 				</div>
 				<div className="text-white font-dosis">
 					<h2
