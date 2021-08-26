@@ -1,35 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import React, { useContext, useEffect, useState } from "react";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 import content from "../content";
 import Typical from "react-typical";
 import { Link as ScrollLink } from "react-scroll";
-
-function BgImage(props) {
-	return (
-		<div
-			style={{
-				background: "url(" + props.bg + ")",
-				backgroundSize: "cover",
-				height: "60vh",
-				width: "60vh",
-				borderRadius: 5,
-				zIndex: "1000",
-			}}
-		>
-			{/* <div
-				style={{
-					position: "absolute",
-					height: "60vh",
-					width: "60vh",
-					backgroundColor: props.tint,
-					zIndex: "1000",
-				}}
-			/> */}
-		</div>
-	);
-}
+import { ThemeContext } from "../contexts/ThemeContext";
+// function BgImage(props) {
+// 	return (
+// 		<div
+// 			style={{
+// 				background: "url(" + props.bg + ")",
+// 				backgroundSize: "cover",
+// 				height: "60vh",
+// 				width: "60vh",
+// 				borderRadius: 5,
+// 				zIndex: "1000",
+// 			}}
+// 		>
+// 			{/* <div
+// 				style={{
+// 					position: "absolute",
+// 					height: "60vh",
+// 					width: "60vh",
+// 					backgroundColor: props.tint,
+// 					zIndex: "1000",
+// 				}}
+// 			/> */}
+// 		</div>
+// 	);
+// }
 
 const Header = () => {
+	const {
+		theme: { color1 },
+	} = useContext(ThemeContext);
 	const [animated, setAnimated] = useState(false);
 	useEffect(() => setAnimated(true), []);
 	return (
@@ -41,13 +44,14 @@ const Header = () => {
 					{/* <LazyLoadImage style={{ zIndex: 1000 }} src={content.header.img} effect="blur"></LazyLoadImage> */}
 				</div>
 				<div className="text-white font-dosis">
+					<span className="font-consolas m-0" style={{ color: color1 }}>
+						{content.header.text[0]}
+					</span>
 					<h2
 						className={`${
 							animated ? "" : "translate-y-10 opacity-0"
 						} transform transition duration-1000 ease-in-out text-3xl md:text-5xl font-bold`}
 					>
-						{content.header.text[0]}
-						<br />
 						{content.header.text[1]}
 					</h2>
 					<h1
@@ -58,16 +62,16 @@ const Header = () => {
 						{content.header.text[2]}
 						<Typical
 							steps={content.header.typical}
-							logo={Infinity}
+							loop={Infinity}
 							className="inline-block"
 							placeholderSrc={process.env.PUBLIC_URL + "/logo512.png"}
 						/>
 					</h1>
-					<ScrollLink smooth={true} to="stack">
-						<button className="animate-float bg-indigo-500 px-10 py-3 uppercase mt-10 rounded-lg text-xl">
+					{/* <ScrollLink smooth={true} to="stack">
+						<button className="animate-float px-10 py-3 uppercase mt-10 rounded-lg text-xl" style={{ background: color1 }}>
 							{content.header.btnText}
 						</button>
-					</ScrollLink>
+					</ScrollLink> */}
 				</div>
 			</div>
 		</div>
