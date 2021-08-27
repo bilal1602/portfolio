@@ -41,7 +41,7 @@ const Header = () => {
 					{/* <BgImage bg={content.header.img} tint="rgba(9, 28, 41,0.7)" /> */}
 					{/* <LazyLoadImage style={{ zIndex: 1000 }} src={content.header.img} effect="blur"></LazyLoadImage> */}
 				</div>
-				<div className="text-white font-roboto">
+				<div className="w-8/12 text-white font-roboto">
 					<span className="font-consolas m-0" style={{ color: color1 }}>
 						{content.header.text[0]}
 					</span>
