@@ -8,11 +8,11 @@ import { darkTheme } from "./config/theme_config";
 import { ThemeContext } from "./contexts/ThemeContext";
 
 //Todo: Add shadow to navbar
+//Todo: Stick navbar to top or hide with animation on scroll
 //Todo: Add navbar behavior for mobile
-//Todo: Fix nav link hover behavior
 //Todo: Add light/dark support and switch
+//Todo: Fix nav link hover behavior
 //Todo: Keep complete section in view port
-//Todo: Stick NavToo top or hide with anmation on scroll
 //Todo: Add Clibre and other fonts
 //Todo: Add Missing sections
 //Todo: Add projects section
