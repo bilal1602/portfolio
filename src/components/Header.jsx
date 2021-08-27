@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 import content from "../content";
 import Typical from "react-typical";
-import { Link as ScrollLink } from "react-scroll";
 import { ThemeContext } from "../contexts/ThemeContext";
 // function BgImage(props) {
 // 	return (
@@ -37,13 +36,12 @@ const Header = () => {
 	useEffect(() => setAnimated(true), []);
 	return (
 		<div className="min-h-screen flex items-center justify-center">
-			{/* // <div className="min-h-screen flex items-center justify-center" style={{ background: "#091c29" }}> */}
 			<div className={"w-10/12 mx-auto flex flex-col md:flex-row-reverse items-center justify-between"}>
 				<div className={"w-full md:w-2/5"}>
 					{/* <BgImage bg={content.header.img} tint="rgba(9, 28, 41,0.7)" /> */}
 					{/* <LazyLoadImage style={{ zIndex: 1000 }} src={content.header.img} effect="blur"></LazyLoadImage> */}
 				</div>
-				<div className="text-white font-dosis">
+				<div className="text-white font-roboto">
 					<span className="font-consolas m-0" style={{ color: color1 }}>
 						{content.header.text[0]}
 					</span>
@@ -67,11 +65,6 @@ const Header = () => {
 							placeholderSrc={process.env.PUBLIC_URL + "/logo512.png"}
 						/>
 					</h1>
-					{/* <ScrollLink smooth={true} to="stack">
-						<button className="animate-float px-10 py-3 uppercase mt-10 rounded-lg text-xl" style={{ background: color1 }}>
-							{content.header.btnText}
-						</button>
-					</ScrollLink> */}
 				</div>
 			</div>
 		</div>

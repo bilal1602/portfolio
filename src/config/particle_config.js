@@ -43,7 +43,7 @@ const particlesConfig = {
 		},
 		line_linked: {
 			enable: false,
-			distance: 150,
+			distance: 200,
 			color: "#ffffff",
 			opacity: 0.4,
 			width: 0.8,
@@ -79,8 +79,9 @@ const particlesConfig = {
 		modes: {
 			connect: {
 				radius: 200,
+				distance: 80,
 				line_linked: {
-					opacity: 0.6,
+					opacity: 0.4,
 				},
 			},
 			grab: {

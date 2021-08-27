@@ -258,9 +258,10 @@ module.exports = {
 				'"Noto Color Emoji"',
 			],
 			serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
-			mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", '"Liberation Mono"', '"Courier New"', "monospace"],
-			dosis: ["Dosis"],
-			consolas: ["Consolas"],
+			mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "Monaco", '"Liberation Mono"', '"Courier New"', "monospace"],
+			roboto: ["Roboto", "sans-serif"],
+			calibri: ["Calibri", "sans-serif"],
+			consolas: ["Consolas", "SFMono-Regular"],
 		},
 		fontSize: {
 			xs: ["0.75rem", { lineHeight: "1rem" }],

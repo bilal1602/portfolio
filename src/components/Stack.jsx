@@ -9,7 +9,7 @@ const Stack = () => {
 		theme: { background },
 	} = useContext(ThemeContext);
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center font-dosis" id="stack" style={{ background }}>
+		<div className="min-h-screen flex flex-col items-center justify-center font-roboto" id="stack" style={{ background }}>
 			<H1 text={"Stack I use"} />
 			<div className="flex flex-wrap justify-center mt-10">
 				{content.stack.tech.map((tech, index) => {
