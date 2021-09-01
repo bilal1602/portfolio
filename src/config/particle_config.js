@@ -1,5 +1,4 @@
 const particlesConfig = {
-	// fpsLimit: 60,
 	particles: {
 		number: {
 			value: 200,

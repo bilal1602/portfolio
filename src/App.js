@@ -7,13 +7,13 @@ import Stack from "./components/Stack";
 import { darkTheme } from "./config/theme_config";
 import { ThemeContext } from "./contexts/ThemeContext";
 
-//Todo: Add shadow to navbar
 //Todo: Stick navbar to top or hide with animation on scroll
+//Todo: Add shadow to navbar
 //Todo: Add navbar behavior for mobile
 //Todo: Add light/dark support and switch
-//Todo: Fix nav link hover behavior
+// // Todo: Fix nav link hover behavior
 //Todo: Keep complete section in view port
-//Todo: Add Clibre and other fonts
+//Todo: Add Calibre and other fonts
 //Todo: Add Missing sections
 //Todo: Add projects section
 
