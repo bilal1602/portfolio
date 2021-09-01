@@ -8,7 +8,7 @@ export default function ParticleBackground({ children }) {
 	let { theme } = useContext(ThemeContext);
 	return (
 		<div style={{ background: theme.background }}>
-			<Particles style={{ position: "absolute" }} height="95%" width="95%" params={particlesConfig} />
+			<Particles style={{ position: "absolute" }} height="95%" width="100%" params={particlesConfig} />
 			{children}
 		</div>
 	);
