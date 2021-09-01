@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
-import content from "../content";
-import { ThemeContext } from "../contexts/ThemeContext";
-import H1 from "./common/H1";
+import H1 from "../common/H1";
+import { ThemeContext } from "../../contexts/ThemeContext";
+import content from "../../content";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 const About = () => {
 	let {
 		theme: { background, text },

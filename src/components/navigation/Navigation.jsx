@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
-import NavLink from "./NavLink";
-import Drawer from "./Drawer";
-import { ThemeContext } from "../contexts/ThemeContext";
-import content from "../content";
+import { NavLink } from "./navLink";
+import { Drawer } from "./drawer";
+// import { BurgerMenu } from "./burgerMenu";
+import { ThemeContext } from "../../contexts/ThemeContext";
+import content from "../../content";
 
 function Navigation(props) {
 	let {
@@ -16,14 +17,15 @@ function Navigation(props) {
 					{content.nav.logo}
 					<span className={"w-3 h-3 bg-red-500 inline-block rounded-full"} />
 				</h1>
-				<div class="hidden md:flex sm:block items-center space-x-3">
+				<div class="hidden md:flex items-center space-x-3">
 					{content.nav.links.map((link, index) => (
 						<NavLink key={index} link={link} count={index + 1} />
 					))}
 				</div>
 				<Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
-				<div className="flex md:hidden items-center">
-					<button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
+				<div className="flex items-center md:hidden">
+					{/* <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} /> */}
+					<button className="outline-none mobile-menu-button z-11" onClick={() => setIsOpen(!isOpen)}>
 						<svg
 							className="w-6 h-6 text-gray-500 hover:text-color1 "
 							x-show="!showMenu"

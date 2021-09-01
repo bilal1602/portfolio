@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import content from "../content";
+import content from "../../content";
 import Typical from "react-typical";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Header = () => {
 	const {
@@ -11,8 +11,8 @@ const Header = () => {
 	useEffect(() => setAnimated(true), []);
 	return (
 		<div className="min-h-screen flex items-center justify-center">
-			<div className={"w-11/12 mx-auto flex flex-col sm:items-center"}>
-				<div className="w-8/12 text-white font-roboto">
+			<div className={"w-11/12"}>
+				<div className="w-8/12 mx-auto items-center justify-center text-white font-roboto md:mx-0 md:mt-20">
 					<span className="font-consolas m-0" style={{ color: color1 }}>
 						{content.header.text[0]}
 					</span>
@@ -41,5 +41,4 @@ const Header = () => {
 		</div>
 	);
 };
-
 export default Header;

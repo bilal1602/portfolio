@@ -42,10 +42,10 @@ const particlesConfig = {
 		},
 		line_linked: {
 			enable: false,
-			distance: 200,
+			distance: 65,
 			color: "#ffffff",
-			opacity: 0.4,
-			width: 0.8,
+			opacity: 0.8,
+			width: 0.6,
 		},
 		move: {
 			enable: true,
