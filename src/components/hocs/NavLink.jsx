@@ -21,12 +21,7 @@ const NavLink = ({ link, count }) => {
 					</li>
 				</ul>
 			</div> */}
-			<span
-				className={"text-base py-2 px-4 hover:cursor-pointer hover:text-color1 transition duration-200"}
-				// onMouseEnter={() => setHovered(true)}
-				// onMouseLeave={() => setHovered(false)}
-				style={{ cursor: "pointer" }}
-			>
+			<span className={"text-base py-2 px-4 cursor-pointer hover:text-color1 transition duration-200"}>
 				<span className={"text-sm"} style={{ color: theme.color1 }}>
 					0{count}
 					{". "}
