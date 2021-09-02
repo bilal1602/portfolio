@@ -7,12 +7,12 @@ import content from "../../content";
 
 function Navigation(props) {
 	let {
-		theme: { background },
+		theme: { background, white },
 	} = useContext(ThemeContext);
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div style={{ background }}>
-			<div className="flex justify-between w-10/12 mx-auto py-3 text-white font-mono">
+			<div className="flex justify-between w-10/12 mx-auto py-3 font-mono" style={{ color: white }}>
 				<h1 className="text-3xl font-bold">
 					{content.nav.logo}
 					<span className={"w-3 h-3 bg-red-500 inline-block rounded-full"} />

@@ -8,7 +8,7 @@ const About = () => {
 		theme: { background, text },
 	} = useContext(ThemeContext);
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center font-mono" id="about" style={{ background }}>
+		<div className="min-h-screen flex flex-col items-center justify-center font-roboto" id="about" style={{ background }}>
 			<H1 text={"About Me"} />
 			<div className={"w-full md:w-2/5"}>
 				{/* <BgImage bg={content.header.img} tint="rgba(9, 28, 41,0.7)" /> */}

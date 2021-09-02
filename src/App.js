@@ -20,7 +20,8 @@ import { ThemeContext } from "./contexts/ThemeContext";
 //Todo: Add shadow to navbar
 
 //*-- Header Changes --*
-//Todo: remove typical and change text it
+// // Todo: remove typical and change text it
+//Todo: Add animation to header text items
 
 //*-- Misc --*
 //Todo: Keep only one section in view port
