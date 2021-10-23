@@ -11,9 +11,9 @@ function Navigation(props) {
 	} = useContext(ThemeContext);
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div style={{ background }}>
+		<div className={"backdrop-blur-md"} style={{ background, transition: "var(--transition)" }}>
 			<div className="flex justify-between w-10/12 mx-auto py-3 font-mono" style={{ color: white }}>
-				<h1 className="text-3xl font-bold">
+				<h1 className="text-3xl font-bold" style={{ color: white }}>
 					{content.nav.logo}
 					<span className={"w-3 h-3 bg-red-500 inline-block rounded-full"} />
 				</h1>
