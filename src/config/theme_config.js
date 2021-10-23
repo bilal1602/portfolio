@@ -18,7 +18,7 @@ export const lightTheme = {
 export const darkTheme = {
 	body: colors.navy,
 	heading: colors.lightest_slate,
-	subHeading: colors.light_slate,
+	subHeading: colors.slate,
 	text: colors.slate,
 	background: colors.navy,
 	white: colors.white,

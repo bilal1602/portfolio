@@ -1,7 +1,10 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-	purge: [],
+	purge: {
+		enabled: process.env.REACT_APP_ENV === "production",
+		content: ["./src/**/*.html", "./src/**/*.jsx", "./src/components/**/*.jsx"],
+	},
 	presets: [],
 	darkMode: false, // or 'media' or 'class'
 	theme: {

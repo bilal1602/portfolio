@@ -6,6 +6,7 @@ import { ParticlesBackground } from "./components/particlesBackground";
 import { Stack } from "./components/stack";
 import { darkTheme } from "./config/theme_config";
 import { ThemeContext } from "./contexts/ThemeContext";
+import { useScrollSnap } from "./hooks.js";
 
 // // Todo: Add navbar behavior for mobile
 // // Todo: Fix nav link hover behavior
@@ -31,13 +32,18 @@ import { ThemeContext } from "./contexts/ThemeContext";
 //Todo: Add light/dark support and switch
 
 export default function App() {
+	const container = useScrollSnap();
 	return (
-		<div>
+		<div ref={container}>
 			<ThemeContext.Provider value={{ theme: darkTheme }}>
 				<Navigation />
-				<ParticlesBackground children={<Header />} />
+
+				<ParticlesBackground />
+				{/* <div> */}
+				<Header />
 				<About />
 				<Stack />
+				{/* </div> */}
 			</ThemeContext.Provider>
 		</div>
 	);

@@ -20,7 +20,7 @@ export default function ParticleBackground({ children }) {
 	React.useEffect(() => window.addEventListener("resize", () => setWindowWidth(window.innerWidth), false), []);
 	return (
 		<div style={{ background: theme.background }}>
-			<Particles style={{ position: "absolute" }} height="95%" width="100%" params={config} />
+			<Particles style={{ position: "absolute", zIndex: 1 }} height="95%" width="100%" params={config} />
 			{children}
 		</div>
 	);
