@@ -1,15 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import content from "../../content";
-import { ThemeContext } from "../../contexts/ThemeContext";
 import H1 from "../common/H1";
 import { Tooltip } from "antd";
 const Stack = () => {
-	let {
-		theme: { background },
-	} = useContext(ThemeContext);
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center font-roboto" id="stack" style={{ background }}>
+		<div className="md:min-h-screen flex flex-col items-center justify-center font-roboto my-10" id="stack">
 			<H1 text={"Tools & Technologies"} />
 			{Object.values(content.stack).map((stackLine) => (
 				<div className="flex flex-wrap justify-center mt-10">

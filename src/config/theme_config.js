@@ -16,6 +16,7 @@ export const lightTheme = {
 	...colors,
 };
 export const darkTheme = {
+	backgroundClass: "bg-navy-dark",
 	body: colors.navy,
 	heading: colors.lightest_slate,
 	subHeading: colors.slate,

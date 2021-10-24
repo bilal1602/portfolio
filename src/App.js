@@ -34,7 +34,7 @@ import { useScrollSnap } from "./hooks.js";
 export default function App() {
 	const container = useScrollSnap();
 	return (
-		<div ref={container}>
+		<div ref={container} style={{ background: darkTheme.background }}>
 			<ThemeContext.Provider value={{ theme: darkTheme }}>
 				<Navigation />
 

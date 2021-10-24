@@ -7,11 +7,12 @@ import content from "../../content";
 
 function Navigation(props) {
 	let {
-		theme: { background, white },
+		theme: { white, background },
 	} = useContext(ThemeContext);
 	const [isOpen, setIsOpen] = useState(false);
+	const navs = content.nav.links.map((link, index) => <NavLink key={index} link={link} count={index + 1} />);
 	return (
-		<div className={"backdrop-blur-md"} style={{ background, transition: "var(--transition)" }}>
+		<div className="sticky top-0 z-50 opacity-80" style={{ background }}>
 			<div className="flex justify-between w-10/12 mx-auto py-3 font-mono" style={{ color: white }}>
 				<h1 className="text-3xl font-bold" style={{ color: white }}>
 					{content.nav.logo}
@@ -22,12 +23,12 @@ function Navigation(props) {
 						<NavLink key={index} link={link} count={index + 1} />
 					))}
 				</div>
-				<Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
+				<Drawer isOpen={isOpen} setIsOpen={setIsOpen} children={navs} />
 				<div className="flex items-center md:hidden">
 					{/* <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} /> */}
 					<button className="outline-none mobile-menu-button z-11" onClick={() => setIsOpen(!isOpen)}>
 						<svg
-							className="w-6 h-6 text-gray-500 hover:text-color1 "
+							className="w-6 h-6 text-slate-dark hover:text-color1 "
 							x-show="!showMenu"
 							fill="none"
 							stroke-linecap="round"

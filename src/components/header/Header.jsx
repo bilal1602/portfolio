@@ -5,12 +5,12 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Header = () => {
 	const {
-		theme: { background, heading, subHeading, color1 },
+		theme: { heading, subHeading, color1 },
 	} = useContext(ThemeContext);
 	// const [animated, setAnimated] = useState(false);
 	// useEffect(() => setAnimated(true), []);
 	return (
-		<div className="min-h-screen flex items-center justify-center" style={{ background }}>
+		<div className="min-h-screen flex items-center justify-center" id="header">
 			<div className={"w-11/12"}>
 				<div className="w-10/12 mx-auto items-center font-roboto md:flex md:flex-col md:mx-0 md:items-start">
 					{/* <div className="w-10/12 mx-auto items-center justify-center font-roboto md:mx-0"> */}

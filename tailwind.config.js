@@ -34,6 +34,16 @@ module.exports = {
 				DEFAULT: "#00C3F5",
 				dark: "#00C3F5",
 			},
+			slate: {
+				light: "#ccd6f6",
+				DEFAULT: "#a8b2d1",
+				dark: "#8892b0",
+			},
+			navy: {
+				light: "#233554",
+				DEFAULT: "#112240",
+				dark: "#0a192f",
+			},
 		},
 		spacing: {
 			px: "1px",

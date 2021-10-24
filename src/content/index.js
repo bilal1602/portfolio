@@ -3,9 +3,10 @@ const content = {
 	nav: {
 		logo: "MBS",
 		links: [
-			{ number: "01.", text: "About", to: "about" },
-			{ number: "02.", text: "Work", to: "mywork" },
+			{ number: "01.", text: "Home", to: "header" },
+			{ number: "02.", text: "About", to: "about" },
 			{ number: "03.", text: "Tools", to: "stack" },
+			// { number: "02.", text: "Work", to: "mywork" },
 		],
 	},
 	header: {

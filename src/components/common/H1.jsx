@@ -3,7 +3,7 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 const H1 = ({ text = "", classes = "", styles = {} }) => {
 	const { theme } = useContext(ThemeContext);
 	return (
-		<h1 className={`text-5xl font-bold ${classes}`} style={{ color: theme.heading, ...styles }}>
+		<h1 className={`text-4xl font-bold ${classes}`} style={{ color: theme.heading, ...styles }}>
 			{text}
 		</h1>
 	);
