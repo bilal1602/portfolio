@@ -13,7 +13,7 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
 				className={`w-6/12 max-w-lg right-0 absolute h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform ${
 					isOpen ? " translate-x-0 " : " translate-x-full "
 				}`}
-				style={{ background: hexToRgba(theme.background, 0.8) }}
+				style={{ background: hexToRgba(theme.background) }}
 			>
 				{/* <button className="text-slate-light ml-2 font-2xl" onClick={() => setIsOpen(false)}> */}
 				<CloseOutlined
@@ -23,8 +23,10 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
 				/>
 				{/* </button> */}
 				<article className="relative w-screen max-w-lg pb-10 divide-y flex flex-col overflow-y-scroll h-full">
-					{children.map((child) => (
-						<header className="p-4 font-bold text-lg">{child}</header>
+					{children.map((child, ind) => (
+						<header key={ind} className="p-4 font-bold text-lg">
+							{child}
+						</header>
 					))}
 					{/* <header className="p-4 font-bold text-lg">Header</header>
 					{children} */}
