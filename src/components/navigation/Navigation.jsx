@@ -18,7 +18,7 @@ function Navigation(props) {
 					{content.nav.logo}
 					<span className={"w-3 h-3 bg-red-500 inline-block rounded-full"} />
 				</h1>
-				<div class="hidden md:flex items-center space-x-3">
+				<div className="hidden md:flex items-center space-x-3">
 					{content.nav.links.map((link, index) => (
 						<NavLink key={index} link={link} count={index + 1} />
 					))}
@@ -29,11 +29,10 @@ function Navigation(props) {
 					<button className="outline-none mobile-menu-button z-11" onClick={() => setIsOpen(!isOpen)}>
 						<svg
 							className="w-6 h-6 text-slate-dark hover:text-color1 "
-							x-show="!showMenu"
 							fill="none"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
 						>
