@@ -7,7 +7,7 @@ import content from "../../content";
 
 function Navigation(props) {
 	let {
-		theme: { white, background },
+		theme: { white, background, color1 },
 	} = useContext(ThemeContext);
 	const [isOpen, setIsOpen] = useState(false);
 	const navs = content.nav.links.map((link, index) => <NavLink key={index} link={link} count={index + 1} />);
@@ -22,6 +22,14 @@ function Navigation(props) {
 					{content.nav.links.map((link, index) => (
 						<NavLink key={index} link={link} count={index + 1} />
 					))}
+					<a href={content.nav.resume} target="_blank">
+						<div
+							className="border-2 border-solid rounded-md cursor-pointer px-3 py-1 text-color1 hover:bg-color1 hover:bg-opacity-10 transition duration-200"
+							style={{ borderColor: color1 }}
+						>
+							Resume
+						</div>
+					</a>
 				</div>
 				<Drawer isOpen={isOpen} setIsOpen={setIsOpen} children={navs} />
 				<div className="flex items-center md:hidden">

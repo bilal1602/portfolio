@@ -1,4 +1,5 @@
 import photo from "./photo.jpg";
+import resume from "./Muhammad Bilal Resume.pdf";
 const content = {
 	nav: {
 		logo: "MBS",
@@ -8,6 +9,7 @@ const content = {
 			{ number: "03.", text: "Tools", to: "stack" },
 			// { number: "02.", text: "Work", to: "mywork" },
 		],
+		resume,
 	},
 	header: {
 		img: photo,
