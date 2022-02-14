@@ -13,7 +13,7 @@ jobs:
               with:
                   node-version: "14.7.0"
             - run: npm ci
-            - run: npm install -D
+            - run: npm ci -D
             - run: npm run build:css
             - run: react-scripts build
             - uses: JamesIves/github-pages-deploy-action@4.1.1
