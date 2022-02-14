@@ -13,7 +13,8 @@ jobs:
             - name: Install and build
             - run: |
                   npm install 
-                  npm run build
+                  npm run build:css 
+                  react-scripts build
 
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@4.2.3
