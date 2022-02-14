@@ -16,7 +16,3 @@ jobs:
             - run: npm install -D
             - run: npm run build:css
             - run: react-scripts build
-            - uses: JamesIves/github-pages-deploy-action@4.1.1
-              with:
-                  branch: main # The branch the action should deploy to.
-                  folder: build # The folder the action should deploy.
