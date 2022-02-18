@@ -22,7 +22,7 @@ function Navigation(props) {
 					{content.nav.links.map((link, index) => (
 						<NavLink key={index} link={link} count={index + 1} />
 					))}
-					<a href={content.nav.resume} target="_blank">
+					<a href={content.nav.resume} rel="noopener">
 						<div
 							className="border-2 border-solid rounded-md cursor-pointer px-3 py-1 text-color1 hover:bg-color1 hover:bg-opacity-10 transition duration-200"
 							style={{ borderColor: color1 }}
