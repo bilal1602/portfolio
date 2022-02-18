@@ -20,5 +20,6 @@ jobs:
 
     deploy:
         needs: build
+        runs-on: ubuntu-latest
         steps:
             - run: gh-pages -d build
