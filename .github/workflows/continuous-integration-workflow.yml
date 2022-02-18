@@ -20,5 +20,5 @@ jobs:
           
     deploy: 
         steps:
-            needs: [build]
+            needs: build
             - run: gh-pages -d build
