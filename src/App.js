@@ -1,5 +1,5 @@
 import React from "react";
-import { About } from "./components/about";
+import { About } from "./components/about/index";
 import { Header } from "./components/header";
 import { Navigation } from "./components/navigation";
 import { ParticlesBackground } from "./components/particlesBackground";
