@@ -10,7 +10,7 @@ jobs:
             REACT_APP_ENV: production
         strategy:
             matrix:
-                node-version: [14.7.0]
+                node-version: [14.15.0]
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2

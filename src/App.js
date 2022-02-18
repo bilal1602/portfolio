@@ -1,9 +1,9 @@
 import React from "react";
 import { About } from "./components/about/index";
-import { Header } from "./components/header";
-import { Navigation } from "./components/navigation";
-import { ParticlesBackground } from "./components/particlesBackground";
-import { Stack } from "./components/stack";
+import { Header } from "./components/header/index";
+import { Navigation } from "./components/navigation/index";
+import { ParticlesBackground } from "./components/particlesBackground/index";
+import { Stack } from "./components/stack/index";
 import { darkTheme } from "./config/theme_config";
 import { ThemeContext } from "./contexts/ThemeContext";
 
