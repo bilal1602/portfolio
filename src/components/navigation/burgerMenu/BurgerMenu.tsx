@@ -1,6 +1,7 @@
 import React from "react";
+import { DrawerProps } from "../drawer/index";
 
-const BurgerMenu = ({ isOpen, setIsOpen }) => {
+const BurgerMenu = ({ isOpen, setIsOpen }: DrawerProps) => {
 	const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
 
 	return (

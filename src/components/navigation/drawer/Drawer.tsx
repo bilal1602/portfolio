@@ -2,7 +2,17 @@ import React, { useContext } from "react";
 import { hexToRgba } from "../../../utils";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import { CloseOutlined } from "@ant-design/icons";
-export default function Drawer({ children, isOpen, setIsOpen }) {
+
+export interface DrawerProps {
+	isOpen: Boolean;
+	setIsOpen: (variable: boolean) => void;
+}
+
+interface Props extends DrawerProps {
+	children: any;
+}
+
+export default function Drawer({ children, isOpen, setIsOpen }: Props) {
 	let { theme } = useContext(ThemeContext);
 	return (
 		<main
@@ -23,7 +33,7 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
 				/>
 				{/* </button> */}
 				<article className="relative w-screen max-w-lg pb-10 divide-y flex flex-col overflow-y-scroll h-full">
-					{children.map((child, ind) => (
+					{children.map((child: string, ind: number) => (
 						<header key={ind} className="p-4 font-bold text-lg">
 							{child}
 						</header>

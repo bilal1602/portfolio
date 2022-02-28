@@ -1,16 +1,16 @@
 import React, { useState, useContext } from "react";
 import { NavLink } from "./navLink";
-import { Drawer } from "./drawer";
+import { Drawer } from "./drawer/index";
 // import { BurgerMenu } from "./burgerMenu";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import content from "../../content";
 
-function Navigation(props) {
+function Navigation() {
 	let {
 		theme: { white, background, color1 },
 	} = useContext(ThemeContext);
 	const [isOpen, setIsOpen] = useState(false);
-	const navs = content.nav.links.map((link, index) => <NavLink key={index} link={link} count={index + 1} />);
+	const navs = content.nav.links.map((link, index) => <NavLink key={index} link={link} />);
 	return (
 		<div className="sticky top-0 z-50 opacity-80" style={{ background }}>
 			<div className="flex justify-between w-10/12 mx-auto py-3 font-mono" style={{ color: white }}>
@@ -20,7 +20,7 @@ function Navigation(props) {
 				</h1>
 				<div className="hidden md:flex items-center space-x-3">
 					{content.nav.links.map((link, index) => (
-						<NavLink key={index} link={link} count={index + 1} />
+						<NavLink key={index} link={link} />
 					))}
 					<a href={content.nav.resume} rel="noopener">
 						<div

@@ -3,6 +3,11 @@ import Particles from "react-particles-js";
 import particlesConfig from "../../config/particle_config";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
+// interface Props {
+// 	children:any;
+// }
+
+// const ParticleBackground: React.FC<Props>  = ({ children }) {
 export default function ParticleBackground({ children }) {
 	let { theme } = useContext(ThemeContext);
 	const [config, setConfig] = useState(particlesConfig);

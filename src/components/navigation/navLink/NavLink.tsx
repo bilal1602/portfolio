@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 
-const NavLink = ({ link }) => {
+type Props = {
+	link: { number: string; text: string; to: string };
+};
+
+const NavLink = ({ link }: Props) => {
 	let { theme } = useContext(ThemeContext);
 	return (
 		<ScrollLink smooth={true} to={link.to}>
